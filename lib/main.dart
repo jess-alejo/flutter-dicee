@@ -21,28 +21,36 @@ void main() {
                 ],
               ),
             ),
-            child: DicePage()),
+            child: const DicePage()),
       ),
     ),
   );
 }
 
 class DicePage extends StatelessWidget {
+  const DicePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Row(
         children: [
           Expanded(
-              child: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Image.asset("assets/images/dice1.png"),
-          )),
+            child: MaterialButton(
+              onPressed: () {
+                print("Left button got clicked");
+              },
+              child: Image.asset("assets/images/dice1.png"),
+            ),
+          ),
           Expanded(
-              child: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Image.asset("assets/images/dice1.png"),
-          )),
+            child: MaterialButton(
+              onPressed: () {
+                print("Right button got clicked");
+              },
+              child: Image.asset("assets/images/dice1.png"),
+            ),
+          ),
         ],
       ),
     );
