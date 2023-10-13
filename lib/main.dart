@@ -7,7 +7,10 @@ void main() {
       home: Scaffold(
         appBar: AppBar(
           title: const Center(
-            child: Text('Dicee'),
+            child: Text(
+              'DICEE',
+              style: TextStyle(fontFamily: 'PressStart2P'),
+            ),
           ),
           backgroundColor: const Color.fromARGB(255, 218, 0, 55),
         ),
